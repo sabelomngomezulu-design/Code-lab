@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Languages • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 8px;
+    }
+    .lang-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: 0.2s ease;
+    }
+    .lang-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .lang-card h3 {
+      color: var(--accent);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .lang-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .intro-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 8px;
+    }
+    .intro-box p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a class="active" href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>How to Communicate with Computers</h1>
+      <p class="lead">Let’s learn the languages of computers — the tools that let us give clear instructions.</p>
+    </section>
+
+    <section class="intro-box">
+      <p>A programming language is a set of instructions, commands, and rules used to create apps, games, and websites. Just as human languages allow people to communicate with each other, coding languages allow humans to give instructions to computers.</p>
+    </section>
+
+    <section>
+      <h2 style="color: var(--text); font-size: 20px; margin-bottom: 16px; text-align: center;">Common Coding Languages & Their Uses</h2>
+      <div class="lang-grid">
+        <article class="lang-card">
+          <h3>1. Python</h3>
+          <p>Known for its simple, readable syntax. Widely used in data science, artificial intelligence, machine learning, web backend development, and automation.</p>
+        </article>
+        <article class="lang-card">
+          <h3>2. JavaScript</h3>
+          <p>The primary language for web development. Used to create interactive features on websites and power full-stack web applications.</p>
+        </article>
+        <article class="lang-card">
+          <h3>3. HTML</h3>
+          <p>The standard code used to structure and display web pages on the internet. It creates the skeleton of every site.</p>
+        </article>
+        <article class="lang-card">
+          <h3>4. CSS</h3>
+          <p>The code used to style and lay out web pages. While HTML provides the structure, CSS controls how that structure looks on screen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card card-accent" style="margin-top: 8px;">
+      <h2 style="font-size: 18px; margin-bottom: 8px;">Ready to practice?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 16px;">Explore free tools and tips, then start building with HTML.</p>
+      <a href="resources.html" class="btn btn-primary">Learn & Practice →</a>
+    </section>
+
+    <div class="actions">
+      <a href="what-is-coding.html" class="btn btn-secondary">← What is Coding</a>
+      <a href="resources.html" class="btn btn-secondary">Resources →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • Languages • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

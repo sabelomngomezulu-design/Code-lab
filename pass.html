@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    main.login-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px 64px;
+      width: 100%;
+    }
+    .login-container {
+      display: flex;
+      flex-direction: row;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 40px;
+      width: 100%;
+      max-width: 720px;
+      gap: 20px;
+    }
+    .login-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .login-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .field label {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .field input {
+      padding: 12px 14px;
+      font-size: 16px;
+      background: var(--surface-2);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      width: 100%;
+      color: var(--text);
+      transition: border-color 0.2s ease;
+    }
+    .field input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .login-form .btn {
+      align-self: flex-end;
+      margin-top: 4px;
+    }
+    @media (max-width: 640px) {
+      .login-container {
+        flex-direction: column;
+        padding: 28px 24px;
+      }
+      .login-left {
+        font-size: 28px;
+        padding: 0 0 8px;
+      }
+      .login-right {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a class="active" href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="login-main">
+    <div class="login-container">
+      <div class="login-left">Code Lab</div>
+      <div class="login-right">
+        <form class="login-form" action="final.html" method="get">
+          <div class="field">
+            <label for="login-pass">Password</label>
+            <input type="password" name="password" id="login-pass" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • Password • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

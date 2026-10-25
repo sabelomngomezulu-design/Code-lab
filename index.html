@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .hero-home {
+      text-align: center;
+      padding: 20px 0 10px;
+    }
+    .hero-home h1 {
+      font-size: 42px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .hero-home .subtitle {
+      color: var(--text-muted);
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+    .hero-home .tagline {
+      color: var(--text);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .steps-card ol {
+      padding-left: 22px;
+      color: var(--text);
+    }
+    .steps-card li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+    .steps-card li strong {
+      color: var(--text);
+    }
+    .cta-row {
+      text-align: center;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero-home">
+      <h1>CODE LAB</h1>
+      <p class="subtitle">Built by IS Coding Club</p>
+      <p class="tagline">Learn coding offline — step by step</p>
+    </section>
+
+    <section class="card card-dark steps-card">
+      <h2 style="color: var(--accent); font-size: 22px; margin-bottom: 18px;">4 Steps to Learn</h2>
+      <ol>
+        <li><strong>What is coding</strong> — understand the idea and why it matters</li>
+        <li><strong>Languages</strong> — meet the tools we use to talk to computers</li>
+        <li><strong>HTML</strong> — build the structure of web pages</li>
+        <li><strong>CSS</strong> — style and layout for clean, modern design</li>
+      </ol>
+    </section>
+
+    <section class="card card-accent">
+      <h2 style="font-size: 20px; margin-bottom: 8px;">Your Journey Starts Here</h2>
+      <p style="color: var(--text-muted); margin-bottom: 16px;">Follow the pages in order. Each lesson builds on the last. At the end you will create your own profile page as the Final Project.</p>
+      <a href="what-is-coding.html" class="btn btn-primary">Start Learning →</a>
+    </section>
+
+    <div class="cta-row actions">
+      <a href="final.html" class="btn btn-secondary">Jump to Final Project</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • Home • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .resource-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .resource-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+      border-color: var(--accent);
+    }
+    .resource-card h3 {
+      color: var(--accent);
+      font-size: 18px;
+      margin: 0;
+    }
+    .resource-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      flex: 1;
+      margin: 0;
+    }
+    .tag {
+      display: inline-block;
+      background: var(--surface-2);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    .tips {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+    }
+    .tips h2 {
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    .tips ul {
+      padding-left: 22px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .tips li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a class="active" href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>Learning Resources</h1>
+      <p class="lead">Practice tools, free sites, and simple tips to keep growing after Code Lab. Start here and build every day.</p>
+    </section>
+
+    <section class="resource-grid">
+      <article class="resource-card">
+        <span class="tag">Practice</span>
+        <h3>CodePen & JSFiddle</h3>
+        <p>Write HTML and CSS in the browser and see results instantly. Great for small experiments and sharing your work.</p>
+      </article>
+      <article class="resource-card">
+        <span class="tag">Reference</span>
+        <h3>MDN Web Docs</h3>
+        <p>The best free documentation for HTML and CSS. Clear explanations and live examples for almost every tag and property.</p>
+      </article>
+      <article class="resource-card">
+        <span class="tag">Courses</span>
+        <h3>freeCodeCamp</h3>
+        <p>Free interactive lessons on responsive web design, HTML, CSS, and more. Earn certificates as you complete projects.</p>
+      </article>
+      <article class="resource-card">
+        <span class="tag">Tools</span>
+        <h3>VS Code</h3>
+        <p>A free, powerful code editor. Use it offline with extensions for HTML/CSS and live preview of your pages.</p>
+      </article>
+      <article class="resource-card">
+        <span class="tag">Practice</span>
+        <h3>Frontend Mentor</h3>
+        <p>Real design challenges. Build small websites from provided designs and improve your layout and CSS skills.</p>
+      </article>
+      <article class="resource-card">
+        <span class="tag">Community</span>
+        <h3>IS Coding Club</h3>
+        <p>Learn together, share projects, and ask questions. Keep practicing with classmates and show your final project.</p>
+      </article>
+    </section>
+
+    <section class="tips">
+      <h2>Beginner Tips for Success</h2>
+      <ul>
+        <li>Type the code yourself — do not only copy and paste.</li>
+        <li>Change one thing at a time and refresh the browser to see what happens.</li>
+        <li>Use the browser DevTools (right-click → Inspect) to experiment with styles live.</li>
+        <li>Keep your HTML clean and use meaningful class names in CSS.</li>
+        <li>Build small projects often: a profile card, a simple quiz page, a recipe list.</li>
+        <li>When something breaks, check spelling, closing tags, and the order of your CSS rules.</li>
+      </ul>
+    </section>
+
+    <div class="actions">
+      <a href="languages.html" class="btn btn-secondary">← Languages</a>
+      <a href="html-1.html" class="btn btn-primary">Start HTML 1 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • Resources • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

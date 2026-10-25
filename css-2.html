@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 2 • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .lesson h2 {
+      color: var(--accent);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .lesson p, .lesson li {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .lesson ul {
+      padding-left: 22px;
+    }
+    .code-box {
+      background: #12151a;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      color: #e8eaed;
+      overflow-x: auto;
+      margin: 14px 0;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .flex-demo {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 14px 0;
+    }
+    .flex-item {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      flex: 1;
+      min-width: 100px;
+      text-align: center;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .tip {
+      background: var(--surface-2);
+      border-left: 4px solid var(--accent-green);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 14px;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .vars-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .var-swatch {
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a class="active" href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>CSS 2 — Layout &amp; Theme</h1>
+      <p class="lead">Go further with Flexbox, CSS variables, hover effects, and clean layout techniques used across Code Lab.</p>
+    </section>
+
+    <section class="lesson">
+      <h2>1. CSS Variables (Custom Properties)</h2>
+      <p>Define colors and values once, then reuse them everywhere. This keeps the theme consistent.</p>
+      <div class="code-box">:root {
+  --bg: #0f1115;
+  --surface: #1a1d24;
+  --accent: #f9c74f;
+  --text: #e8eaed;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}</div>
+      <div class="vars-box">
+        <div class="var-swatch" style="background:#0f1115; color:#e8eaed;">--bg</div>
+        <div class="var-swatch" style="background:#1a1d24; color:#e8eaed;">--surface</div>
+        <div class="var-swatch" style="background:#f9c74f; color:#111;">--accent</div>
+        <div class="var-swatch" style="background:#90be6d; color:#111;">--accent-green</div>
+      </div>
+    </section>
+
+    <section class="lesson">
+      <h2>2. Flexbox Basics</h2>
+      <p>Flexbox makes it easy to align items in a row or column and distribute space.</p>
+      <div class="code-box">.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}</div>
+      <div class="flex-demo">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+      <div class="tip">The navigation bar and card layouts on this site use Flexbox.</div>
+    </section>
+
+    <section class="lesson">
+      <h2>3. Hover & Transitions</h2>
+      <p>Make interfaces feel alive with simple transitions.</p>
+      <div class="code-box">.btn {
+  transition: 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+</div>
+    </section>
+
+    <section class="lesson">
+      <h2>4. Box Model Reminder</h2>
+      <p>Every element is a box with content, padding, border, and margin.</p>
+      <ul>
+        <li><strong style="color: var(--text);">content</strong> — text or children</li>
+        <li><strong style="color: var(--text);">padding</strong> — space inside the border</li>
+        <li><strong style="color: var(--text);">border</strong> — the edge around the padding</li>
+        <li><strong style="color: var(--text);">margin</strong> — space outside the border</li>
+      </ul>
+      <div class="code-box">* {
+  box-sizing: border-box;
+}</div>
+      <div class="tip">Using border-box makes width and height include padding and border, which is easier for beginners.</div>
+    </section>
+
+    <section class="lesson">
+      <h2>5. Putting It Together</h2>
+      <p>You now know enough to style a full page:</p>
+      <ul>
+        <li>Use CSS variables for a consistent theme</li>
+        <li>Style with classes (not only element selectors)</li>
+        <li>Use Flexbox for navigation and card rows</li>
+        <li>Add small hover effects and smooth transitions</li>
+        <li>Keep spacing consistent (padding and margin)</li>
+      </ul>
+      <p>Next step: complete your Final Project profile page.</p>
+    </section>
+
+    <div class="actions">
+      <a href="css-1.html" class="btn btn-secondary">← CSS 1</a>
+      <a href="final.html" class="btn btn-primary">Final Project →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • CSS 2 • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Coding • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .content-card h2 {
+      color: var(--accent);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .content-card p, .content-card li {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .content-card ul, .content-card ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+    .highlight {
+      background: var(--surface-2);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      color: var(--text);
+    }
+    .steps {
+      display: grid;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--surface-2);
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .step-num {
+      background: var(--accent);
+      color: #111;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .nav-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>What is Coding?</h1>
+      <p class="lead">Coding is how humans give instructions to computers. You write clear steps in a language the computer understands so it can perform tasks, solve problems, and build websites, apps, and games.</p>
+    </section>
+
+    <section class="content-card">
+      <h2>Simple Definition</h2>
+      <p>Coding (or programming) means writing a set of instructions that a computer can follow. Just like a recipe tells you how to cook a meal step by step, code tells a computer exactly what to do.</p>
+      <div class="highlight">
+        <strong>Key idea:</strong> Computers only do what you tell them — precisely and repeatedly. Good code is clear, correct, and easy for other people to read.
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Why Learn Coding?</h2>
+      <ul>
+        <li>Build websites, apps, and tools that help people</li>
+        <li>Solve real problems with logic and creativity</li>
+        <li>Understand how the technology around you works</li>
+        <li>Open doors to careers in tech, design, science, and more</li>
+        <li>Think more carefully and break big problems into small steps</li>
+      </ul>
+    </section>
+
+    <section class="content-card">
+      <h2>How Coding Works (Beginner View)</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <strong style="color: var(--text);">You write code</strong>
+            <p style="margin: 4px 0 0; color: var(--text-muted);">In a text editor or online tool using a programming language (HTML, CSS, Python, etc.).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <strong style="color: var(--text);">The computer runs it</strong>
+            <p style="margin: 4px 0 0; color: var(--text-muted);">A browser or program reads your instructions and carries them out.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <strong style="color: var(--text);">You see the result</strong>
+            <p style="margin: 4px 0 0; color: var(--text-muted);">A webpage appears, a calculation finishes, or a game responds to clicks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>What You Will Learn in Code Lab</h2>
+      <ol>
+        <li><strong style="color: var(--text);">Languages</strong> — the tools we use to talk to computers</li>
+        <li><strong style="color: var(--text);">HTML</strong> — structure of web pages (headings, paragraphs, links, images)</li>
+        <li><strong style="color: var(--text);">CSS</strong> — style and layout (colors, spacing, fonts, responsive design)</li>
+        <li><strong style="color: var(--text);">Final Project</strong> — put it all together into your own profile page</li>
+      </ol>
+    </section>
+
+    <div class="nav-actions actions">
+      <a href="index.html" class="btn btn-secondary">← Home</a>
+      <a href="languages.html" class="btn btn-primary">Next: Languages →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • What is Coding • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

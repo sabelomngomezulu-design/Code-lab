@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 2 • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .element-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+      transition: 0.2s ease;
+    }
+    .element-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+    .element-card h2 {
+      color: var(--accent);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .element-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a class="active" href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>Let’s Dive Deeper into HTML Elements</h1>
+      <p class="lead">Important building blocks you will use on almost every page: containers, classes, buttons, links, and navigation.</p>
+    </section>
+
+    <article class="element-card">
+      <h2>div</h2>
+      <p>A div is a container element that can hold other HTML elements. It is often used to group related content together and apply CSS styles or JavaScript functionality to that group of elements.</p>
+    </article>
+
+    <article class="element-card">
+      <h2>class</h2>
+      <p>Classes are used to define CSS styles for HTML elements. Classes can be applied to multiple elements, allowing you to reuse the same styles across different parts of your website.</p>
+    </article>
+
+    <article class="element-card">
+      <h2>button</h2>
+      <p>Buttons are interactive elements that allow users to perform actions on a website. They can be used to submit forms, trigger JavaScript functions, or navigate to other pages.</p>
+    </article>
+
+    <article class="element-card">
+      <h2>a (anchor / link)</h2>
+      <p>The a element is used to create hyperlinks, which allow users to navigate to other web pages or resources. The href attribute specifies the URL of the page or resource that the link points to.</p>
+    </article>
+
+    <article class="element-card">
+      <h2>link</h2>
+      <p>The link element is used to link to external resources, such as CSS files or favicons. The href attribute specifies the URL of the resource that the link points to. It lives in the head of the document.</p>
+    </article>
+
+    <article class="element-card">
+      <h2>Styling in HTML</h2>
+      <p>Styling is done using CSS (Cascading Style Sheets). CSS allows you to control the layout, colors, fonts, and other visual aspects of your web pages. You can apply styles with inline styles, internal stylesheets, or external stylesheets.</p>
+    </article>
+
+    <article class="element-card">
+      <h2>nav</h2>
+      <p>The nav element is used to define a set of navigation links. It is commonly placed at the top or side of a website to help users jump between different pages or sections.</p>
+    </article>
+
+    <div class="actions">
+      <a href="html-1.html" class="btn btn-secondary">← HTML 1</a>
+      <a href="css-1.html" class="btn btn-primary">Next: CSS 1 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • HTML 2 • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

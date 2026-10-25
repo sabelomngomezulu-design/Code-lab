@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 1 • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .lesson h2 {
+      color: var(--accent);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .lesson p, .lesson li {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .lesson ul {
+      padding-left: 22px;
+    }
+    .code-box {
+      background: #12151a;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      color: #e8eaed;
+      overflow-x: auto;
+      margin: 14px 0;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .demo-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 14px 0;
+      text-align: center;
+    }
+    .demo-box.example {
+      background: linear-gradient(135deg, #f9c74f, #f8961e);
+      color: #111;
+      font-weight: 600;
+      border: none;
+    }
+    .tip {
+      background: var(--surface-2);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 14px;
+      color: var(--text);
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a class="active" href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>CSS 1 — Styling Basics</h1>
+      <p class="lead">CSS (Cascading Style Sheets) controls how HTML looks: colors, fonts, spacing, and layout. HTML is the structure; CSS is the design.</p>
+    </section>
+
+    <section class="lesson">
+      <h2>1. How to Add CSS</h2>
+      <p>Three common ways:</p>
+      <ul>
+        <li><strong style="color: var(--text);">Inline</strong> — style attribute on one element</li>
+        <li><strong style="color: var(--text);">Internal</strong> — style tag inside the head</li>
+        <li><strong style="color: var(--text);">External</strong> — separate .css file linked with link (best for bigger projects)</li>
+      </ul>
+      <div class="code-box">link rel="stylesheet" href="style.css"</div>
+      <div class="tip">Code Lab uses an external stylesheet (style.css) so all pages share the same theme.</div>
+    </section>
+
+    <section class="lesson">
+      <h2>2. Selectors & Properties</h2>
+      <p>A CSS rule looks like this:</p>
+      <div class="code-box">selector {
+  property: value;
+}</div>
+      <p>Example — make all paragraphs muted gray:</p>
+      <div class="code-box">
+        p {
+          color: black;
+          font-size: 16px;
+        }
+</div>
+    </section>
+
+    <section class="lesson">
+      <h2>3. Common Properties (Beginner)</h2>
+      <ul>
+        <li><code style="color: var(--accent);">color</code> — text color</li>
+        <li><code style="color: var(--accent);">background-color</code> — background of an element</li>
+        <li><code style="color: var(--accent);">font-size</code> / <code style="color: var(--accent);">font-weight</code> — size and boldness</li>
+        <li><code style="color: var(--accent);">padding</code> — space inside an element</li>
+        <li><code style="color: var(--accent);">margin</code> — space outside an element</li>
+        <li><code style="color: var(--accent);">border</code> / <code style="color: var(--accent);">border-radius</code> — outlines and rounded corners</li>
+      </ul>
+      <div class="demo-box example">
+        This box uses padding, border-radius, and a gradient background.
+      </div>
+    </section>
+
+    <section class="lesson">
+      <h2>4. Classes & IDs</h2>
+      <p>Use classes to style groups of elements. Use IDs for unique elements.</p>
+      <div class="code-box">div class="card".../div
+
+.card {
+  background: #1a1d24;
+  padding: 28px;
+  border-radius: 14px;
+}</div>
+      <div class="tip">Prefer classes over IDs for most styling. Classes can be reused; IDs should be unique on the page.</div>
+    </section>
+
+    <div class="actions">
+      <a href="html-2.html" class="btn btn-secondary">← HTML 2</a>
+      <a href="css-2.html" class="btn btn-primary">Next: CSS 2 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • CSS 1 • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>

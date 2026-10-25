@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 1 • Code Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .lesson h2 {
+      color: var(--accent);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .lesson p, .lesson li {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .lesson ul {
+      padding-left: 22px;
+    }
+    .code-box {
+      background: #12151a;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      color: #e8eaed;
+      overflow-x: auto;
+      margin: 14px 0;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+    .tip {
+      background: var(--surface-2);
+      border-left: 4px solid var(--accent-green);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 14px;
+      color: var(--text);
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-brand">Code Lab</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="what-is-coding.html">What</a>
+        <a href="languages.html">Lang</a>
+        <a href="resources.html">Res</a>
+        <a class="active" href="html-1.html">HTML 1</a>
+        <a href="html-2.html">HTML 2</a>
+        <a href="css-1.html">CSS 1</a>
+        <a href="css-2.html">CSS 2</a>
+        <a href="final.html">Final</a>
+        <a href="account.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card card-dark">
+      <h1>HTML 1 — The Basics</h1>
+      <p class="lead">HTML is the skeleton of every webpage. It gives structure: headings, paragraphs, lists, links, and images.</p>
+    </section>
+
+    <section class="lesson">
+      <h2>1. What is HTML?</h2>
+      <p>HTML stands for <strong style="color: var(--text);">HyperText Markup Language</strong>. It uses tags to mark up content so browsers know what each part is.</p>
+      <p>Most tags come in pairs: an opening tag and a closing tag.</p>
+      <div class="code-box">This is a paragraph./p</div>
+    </section>
+
+    <section class="lesson">
+      <h2>2. Basic Page Structure</h2>
+      <p>Every HTML page follows a simple skeleton:</p>
+      <div class="code-box">!DOCTYPE html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+  </head>
+  <body>
+    <!--your content goes here-->
+</body>
+</html>
+</div>
+      <div class="tip">The head holds information about the page. The <body> holds everything the user sees.</div>
+    </section>
+
+    <section class="lesson">
+      <h2>3. Headings  Paragraphs</h2>
+      <p>Use headings for titles and sections. There are six levels: h1 (biggest) to h6 (smallest).</p>
+      <div class="code-box"><h1>Main Title <h1>
+<h2>Section Title</h2>
+<p>A normal paragraph of text.</p></div>
+      <p>Use only one <code style="color: var(--accent);"><h1></code> per page for the main title. Then use h2, h3 for subsections.</p>
+    </section>
+
+    <section class="lesson">
+      <h2>4. Lists</h2>
+      <p>Unordered lists (bullets) and ordered lists (numbers):</p>
+      <div class="code-box">
+        <ul>
+          <li>Fisrt Item</li>
+          <li>Secong Item</li>
+      </ul>
+
+<ol>
+  <li>Step one </li>
+  <li>Step two</li>
+</ol>
+</div>
+    </section>
+
+    <section class="lesson">
+      <h2>5. Links & Images</h2>
+      <p>Links use the <code style="color: var(--accent);">a</code> tag. Images use <code style="color: var(--accent);">&lt;img&gt;</code> (self-closing).</p>
+      <div class="code-box">a href="page.html"Click me/a
+
+img src="photo.jpg" alt="Description";</div>
+      <div class="tip">Always add an alt attribute to images. It helps accessibility and shows text if the image fails to load.</div>
+    </section>
+
+    <div class="actions">
+      <a href="resources.html" class="btn btn-secondary">← Resources</a>
+      <a href="html-2.html" class="btn btn-primary">Next: HTML 2 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Code Lab • HTML 1 • Built with HTML & CSS</p>
+  </footer>
+</body>
+</html>
